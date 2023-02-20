@@ -6,16 +6,11 @@ import data from "./assets/data";
 
 export default function App() {
   
-  const cards = data.map((value, index) => {
+  const cards = data.map((item) => {
     return (
       <Card
-        key={data[index].id}
-        img={data[index].coverImg}
-        rating={data[index].stats.rating}
-        reviewCount={data[index].stats.reviewCount}
-        title={data[index].title}
-        price={data[index].price}
-        location={data[index].location}
+        key={item.id}
+        {...item}
       />
     );
   });
